@@ -10,11 +10,13 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: 'Les Matematika' },
-  { label: 'Les Fisika' },
-  { label: 'Les Kimia' },
+  { label: 'Les TK' },
+  { label: 'Les SD' },
+  { label: 'Les SMP' },
+  { label: 'Persiapan Olimpiade' },
   { label: 'Les Bahasa Inggris' },
-  { label: 'Les Biologi' },
+  { label: 'Les Bahasa Jepang' },
+  { label: 'Les Bahasa Mandarin' },
 ];
 
 const socialLinks = [
@@ -35,22 +37,25 @@ export function Footer() {
               <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-hero">
                 <GraduationCap className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">LesPrivat</span>
+              <span className="text-xl font-bold">Les Privat Denpasar</span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
               Platform les privat terpercaya untuk membantu siswa meraih prestasi akademik terbaik dengan metode pembelajaran yang efektif dan menyenangkan.
             </p>
             <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-background/10 hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-background/10 hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={social.label}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -74,13 +79,13 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Layanan Kami</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.label}>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+              {services.map((service, index) => (
+                <div key={`${service.label}-${index}`}>
                   <span className="text-background/70 text-sm">{service.label}</span>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact */}
@@ -112,7 +117,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm">
-              © 2024 LesPrivat. Hak Cipta Dilindungi.
+              ©2023 Les Private Denpasar. Hak Cipta Dilindungi.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy" className="text-background/60 hover:text-primary text-sm transition-colors">

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/image.png';
 
 const navLinks = [
   { href: '/', label: 'Beranda' },
@@ -24,10 +25,10 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-hero shadow-glow">
-              <GraduationCap className="w-6 h-6 text-primary-foreground" />
+             <img src={logo} alt="Logo" className='rounded-md' />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Les<span className="text-gradient-hero">Privat</span>
+              Les Private Denpasar
             </span>
           </Link>
 
@@ -50,14 +51,14 @@ export function Navbar() {
           </div>
 
           {/* Auth Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" asChild>
               <Link to="/login">Masuk</Link>
             </Button>
             <Button variant="accent" asChild>
               <Link to="/register">Daftar Sekarang</Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

@@ -11,12 +11,12 @@ import { AuthLayout } from "@/layouts/AuthLayout";
 import { AdminLayout } from "@/layouts/AdminLayout";
 
 // Public Pages
-import { HomePage } from "@/pages/public/HomePage";
-import { AboutPage } from "@/pages/public/AboutPage";
-import { ServicesPage } from "@/pages/public/ServicesPage";
-import { PortfolioPage } from "@/pages/public/PortfolioPage";
+import { HomePage } from "@/pages/public/home";
+import { AboutPage } from "@/pages/public/about";
+import { ServicesPage } from "@/pages/public/services";
+import { PortfolioPage } from "@/pages/public/portfolio";
 import { DocumentationPage } from "@/pages/public/DocumentationPage";
-import { FeedbackPage } from "@/pages/public/FeedbackPage";
+import { FeedbackPage } from "@/pages/public/feedback";
 
 // Auth Pages
 import { LoginPage } from "@/pages/auth/LoginPage";
