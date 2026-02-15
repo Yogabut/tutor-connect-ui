@@ -5,6 +5,7 @@ import {
   FileImage,
   MessageSquare,
   User,
+  Users,
   LogOut,
   GraduationCap,
   Menu,
@@ -28,6 +29,7 @@ import { cn } from '@/lib/utils';
 
 const sidebarLinks = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/admin/students', label: 'Siswa', icon: Users },
   { href: '/admin/documentation', label: 'Dokumentasi', icon: FileImage },
   { href: '/admin/feedback', label: 'Feedback', icon: MessageSquare },
   { href: '/admin/profile', label: 'Profil', icon: User },

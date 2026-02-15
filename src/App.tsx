@@ -24,6 +24,7 @@ import { RegisterPage } from "@/pages/auth/RegisterPage";
 
 // Admin Pages
 import { AdminDashboard } from "@/pages/admin/AdminDashboard";
+import { AdminStudents } from "@/pages/admin/AdminStudents";
 import { AdminDocumentation } from "@/pages/admin/AdminDocumentation";
 import { AdminFeedback } from "@/pages/admin/AdminFeedback";
 import { AdminProfile } from "@/pages/admin/AdminProfile";
@@ -59,6 +60,7 @@ const App = () => (
             {/* Admin Routes */}
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
+              <Route path="students" element={<AdminStudents />} />
               <Route path="documentation" element={<AdminDocumentation />} />
               <Route path="feedback" element={<AdminFeedback />} />
               <Route path="profile" element={<AdminProfile />} />
